@@ -26,14 +26,14 @@ def PorTipo(Album):
 
   print(Por_Album())
 
-#@app.route("/Por_año/<año>")
-def PorEstado(año):
-  año=int(año)
-  resultados=base[base["año"]==año]
+#@app.route("/Por_ano/<ano>")
+def PorEstado(ano):
+  año=int(ano)
+  resultados=base[base["ano"]==ano]
   resultados=str(resultados)
   return resultados
 
-print (Poraño())
+print (Porano())
 
 if __name__=="__main__":
   app.run
