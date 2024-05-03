@@ -1,0 +1,39 @@
+import pandas as pd
+from flask import Flask
+
+app=Flask(_name_)
+
+base=pd.read_excel("cancionesLM.xlsx")
+
+@app.route("/")
+def Principal():
+  return "Esta es una api que te muestra canciones de Luis Miguel"
+
+#@app.route("Por_Nombre/<Nombre>")
+def PorNombre(Nombre):
+  Numero=int(Numero)
+  fila=base[base["Nombre"]==Nombre]
+  respuesta=f"La cancion es {fila.loc[:,'Nombre']}"
+  return respuesta
+
+  print(PorNombre())
+
+#@app.route("/Por_Album/<Album")
+def PorTipo(Album):
+  resultados=base[base["Album"]==Tipo]
+  resultados=str(resultados)
+  return resultados
+
+  print(Por_Album())
+
+#@app.route("/Por_año/<año>")
+def PorEstado(año):
+  año=int(año)
+  resultados=base[base["año"]==año]
+  resultados=str(resultados)
+  return resultados
+
+print (Poraño())
+
+if __name__=="__main__":
+  app.run
